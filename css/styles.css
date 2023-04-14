@@ -1,0 +1,400 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --text-white: rgb(255 255 255);
+  --background-black: rgb(18, 18, 18);
+
+  --decoration-red: rgb(255, 0, 0, 30%);
+  --decoration-blue: rgba(0, 162, 255, 30%);
+  --decoration-green: rgb(9, 163, 80, 30%);
+  --decoration-yellow: rgb(255, 230, 0, 30%);
+}
+
+body {
+  background-color: #121212;
+ 
+}
+
+.changeBPM {
+  display: flex;
+  gap: 20px;
+margin: 2em 0 0 2em;
+}
+
+.speed {
+  position: absolute;
+  top: 7em;
+}
+#slow-down,#speed-up {
+  display: none;
+}
+#slow-down {
+  margin-right: 2em;
+}
+#slow-down img{
+  transform: rotate(180deg);
+}
+
+.changeBPM button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+}
+.changeBPM button img{
+  display: block;
+  width: 100px;
+  height: auto;
+  filter: drop-shadow(0 0 .75rem #eeebe3);
+  margin-top: .5em;
+}
+
+/* IMG SRC veranderen */
+.activeBPM button img{
+  
+  filter: drop-shadow(0 0 .75rem red)!important;
+}
+
+.rotate {
+  width: 90vh;
+  height: 90vh;
+  border-radius: 100%;
+  background-image: url(../images/finalplaatje.png);
+  background-size: cover;
+  position: fixed;
+  bottom: -75vh;
+  left: 5%;
+  z-index: 10;
+  filter: drop-shadow(0 0 .75rem #eeebe3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotation 4s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sound {
+  background-color: transparent;
+  border-radius: 100%;
+  border: none;
+  position: absolute; 
+}
+section {
+  display: flex;
+  gap: 20px;
+}
+section button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+}
+section button img {
+  display: block;
+  width: 60px;
+  height: auto;
+}
+.circle1 {
+  width: 80vh;
+  height: 80vh;
+  cursor: pointer;
+  border: 4px solid #eeebe3;
+  z-index: 10;
+}
+
+.space1 {
+  width: 78vh;
+  height: 78vh;
+  background-color: transparent;
+  border-radius: 100%;
+  cursor:auto;
+  z-index: 12;
+}
+
+.circle2 {
+  border: 4px solid #eeebe3;
+  width: 70vh;
+  height: 70vh;
+  z-index: 14;
+  cursor: pointer;
+}
+
+/* .space2 {
+  width: 68vh;
+  height: 68vh;
+  border-radius: 100%;
+  background-color: transparent;
+  z-index: 16;
+  position: absolute;
+  cursor: auto;
+} */
+
+.circle3 {
+  border: 4px solid #eeebe3;
+  width: 60vh;
+  height: 60vh;
+  z-index: 18;
+  cursor: pointer;
+}
+
+/* .space3 {
+  cursor: auto;
+  z-index: 20;
+  width: 58vh;
+  height: 58vh;
+  border-radius: 100%;
+  background-color: transparent;
+  position: absolute;
+} */
+
+.circle4 {
+  border: 4px solid #eeebe3;
+  width: 50vh;
+  height: 50vh;
+  z-index: 22;
+  cursor: pointer;
+}
+/* .space4 {
+  cursor: auto;
+  z-index: 24;
+  width: 48vh;
+  height: 48vh;
+  border-radius: 100%;
+  background-color: transparent;
+  position: absolute;
+} */
+
+.circle5 {
+  border: 4px solid #eeebe3;
+  width: 40vh;
+  height: 40vh;
+  z-index: 26;
+  cursor: pointer;
+}
+/* .space5 {
+  cursor: auto;
+  z-index: 28;
+  width: 38vh;
+  height: 38vh;
+  border-radius: 100%;
+  background-color: transparent;
+  position: absolute;
+} */
+
+.circle6 {
+  border: 4px solid #eeebe3;
+  width: 30vh;
+  height: 30vh;
+  z-index: 30;
+  cursor: pointer;
+}
+/* .space6 {
+  cursor: auto;
+  z-index: 32;
+  width: 28vh;
+  height: 28vh;
+  border-radius: 100%;
+  background-color: transparent;
+  position: absolute;
+} */
+
+@media screen and (min-width: 600px) {
+  .rotate {
+    width: 150vh;
+    height: 150vh;
+  }
+  .circle1 {
+    width: 130vh;
+    height: 130vh;
+  }
+  .space1{
+    width: 128vh;
+    height: 128vh;
+  }
+  .circle2 {
+    width: 115vh;
+    height: 115vh;
+  }
+  .space2{
+    width: 113vh;
+    height: 113vh;
+  }
+
+  .circle3 {
+    width: 100vh;
+    height: 100vh;
+  }
+  
+  .space3{
+    width: 98vh;
+    height: 98vh;
+  }
+
+  .circle4 {
+    width: 85vh;
+    height: 85vh;
+  }
+  
+  .space4 {
+    width: 83vh;
+    height: 83vh;
+  }
+
+  .circle5 {
+    width: 70vh;
+    height: 70vh;
+  }
+  
+  .space5 {
+    width: 68vh;
+    height: 68vh;
+  }
+
+  .circle6 {
+    width: 55vh;
+    height: 55vh;
+  }
+  
+  .space6 {
+    width: 53vh;
+    height: 53vh;
+  }
+}
+
+.circle1.active {
+  border: 4px solid #39B5E0;
+}
+.circle2.active {
+  border: 4px solid #A31ACB;
+}
+.circle3.active {
+  border: 4px solid #FF78F0;
+}
+.circle4.active {
+  border: 4px solid #F5EA5A;
+}
+.circle5.active {
+  border: 4px solid #24E500;
+}
+.circle6.active {
+  border: 4px solid #FF3131;
+}
+
+
+/* main {
+  background-color: var(--background-black);
+  height: 100dvh;
+} */
+
+main > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+main div div {
+  background-color: var(--decoration-blue);
+  width: 15em;
+  aspect-ratio: 1/1;
+
+  border-radius: 20em;
+  filter: blur(0.8em);
+  position: relative;
+}
+
+main div div:first-of-type {
+  background-color: var(--decoration-blue);
+  position: absolute;
+  right: 5em;
+  top: -3em;
+  animation: moving 35s linear infinite alternate;
+}
+main div div:nth-of-type(2) {
+  background-color: var(--decoration-red);
+  width: 25em;
+  position: absolute;
+  right: -12em;
+  top: -3em;
+  animation: moving2 40s linear infinite alternate;
+}
+main div div:nth-of-type(3) {
+  background-color: var(--decoration-green);
+  width: 5em;
+  position: absolute;
+  right: 4em;
+  bottom: 5em;
+  animation: moving3 10s linear infinite alternate;
+}
+main div div:nth-of-type(4) {
+  background-color: var(--decoration-yellow);
+  width: 4em;
+  position: absolute;
+  right: -0.8em;
+  bottom: 0em;
+  animation: moving3 30s 2s linear infinite alternate;
+}
+
+
+@keyframes moving {
+    0% {
+        transform: translateX(0em) translatey(0em);
+    }
+    33% {
+        transform: translateX(3em) translatey(18em);
+    }
+    66% {
+        transform: translateX(-18em) translatey(10em);
+    }
+    100% {
+        transform: translateX(0em) translatey(0em);
+    }
+}
+
+@keyframes moving2 {
+    0% {
+        transform: translateX(0em) translatey(0em);
+    }
+    33% {
+        transform: translateX(-18em) translatey(2em);
+    }
+    66% {
+        transform: translateX(-16em) translatey(16em);
+    }
+    100% {
+        transform: translateX(0em) translatey(0em);
+    }
+}
+
+@keyframes moving3 {
+    0% {
+        transform: translateX(0em) translatey(0em);
+    }
+    33% {
+        transform: translateX(-18em) translatey(-20em);
+    }
+    66% {
+        transform: translateX(-3em) translatey(-16em);
+    }
+    100% {
+        transform: translateX(0em) translatey(0em);
+    }
+}
+
+.arm img {
+  width: 15%;
+  position:fixed;
+  right: 10%;
+  z-index: 100;
+}
